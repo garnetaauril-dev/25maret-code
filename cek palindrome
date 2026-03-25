@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int isPalindrome(int n) {
+    int asli = n, balik = 0;
+
+    while (n != 0) {
+        balik = balik * 10 + (n % 10);
+        n /= 10;
+    }
+
+    return asli == balik;
+}
+
+int main() {
+    if (isPalindrome(121))
+        printf("Palindrome\n");
+    else
+        printf("Bukan palindrome\n");
+
+    return 0;
+}
